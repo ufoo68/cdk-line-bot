@@ -3,6 +3,7 @@ import { MessageType, DbHandlerEvent, DbHandlerEventResponse } from 'layer'
 
 const dynamodb = new AWS.DynamoDB()
 
+
 async function addList(message: string, userId: string): Promise<string[]> {
   const { Item } = await dynamodb.getItem({
     TableName: process.env.TABLE_NAME!,
