@@ -49,6 +49,7 @@ async function clearList(userId: string): Promise<string[]> {
       }
     },
   }).promise()
+
   return []
 }
 
